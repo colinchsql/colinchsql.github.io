@@ -3,7 +3,7 @@ layout: post
 title: "Analyzing and optimizing query performance in Apache Samza using the SQL Query Store"
 description: " "
 date: 2023-10-04
-tags: [Introduction), Using]
+tags: [Using]
 comments: true
 share: true
 ---

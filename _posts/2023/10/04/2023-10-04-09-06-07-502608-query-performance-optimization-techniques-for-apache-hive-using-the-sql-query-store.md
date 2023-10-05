@@ -3,7 +3,7 @@ layout: post
 title: "Query performance optimization techniques for Apache Hive using the SQL Query Store"
 description: " "
 date: 2023-10-04
-tags: [introduction), enabling]
+tags: [enabling]
 comments: true
 share: true
 ---

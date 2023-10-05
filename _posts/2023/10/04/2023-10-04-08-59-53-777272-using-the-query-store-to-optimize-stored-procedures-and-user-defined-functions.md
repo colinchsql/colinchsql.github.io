@@ -3,7 +3,7 @@ layout: post
 title: "Using the Query Store to optimize stored procedures and user-defined functions"
 description: " "
 date: 2023-10-04
-tags: [introduction), enabling]
+tags: [enabling]
 comments: true
 share: true
 ---

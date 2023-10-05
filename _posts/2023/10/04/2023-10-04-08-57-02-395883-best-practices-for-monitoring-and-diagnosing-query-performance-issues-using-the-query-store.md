@@ -3,7 +3,7 @@ layout: post
 title: "Best practices for monitoring and diagnosing query performance issues using the Query Store"
 description: " "
 date: 2023-10-04
-tags: [introduction), enabling]
+tags: [enabling]
 comments: true
 share: true
 ---

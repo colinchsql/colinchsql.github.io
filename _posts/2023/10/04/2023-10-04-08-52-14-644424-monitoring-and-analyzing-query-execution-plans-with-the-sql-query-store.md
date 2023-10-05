@@ -3,7 +3,7 @@ layout: post
 title: "Monitoring and analyzing query execution plans with the SQL Query Store"
 description: " "
 date: 2023-10-04
-tags: [introduction), enabling]
+tags: [enabling]
 comments: true
 share: true
 ---

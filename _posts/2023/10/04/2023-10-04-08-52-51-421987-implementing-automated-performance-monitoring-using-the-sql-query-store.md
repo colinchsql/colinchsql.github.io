@@ -3,7 +3,7 @@ layout: post
 title: "Implementing automated performance monitoring using the SQL Query Store"
 description: " "
 date: 2023-10-04
-tags: [introduction), enabling]
+tags: [enabling]
 comments: true
 share: true
 ---

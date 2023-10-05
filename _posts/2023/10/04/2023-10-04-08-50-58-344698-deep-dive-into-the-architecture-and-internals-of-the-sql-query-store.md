@@ -3,7 +3,7 @@ layout: post
 title: "Deep dive into the architecture and internals of the SQL Query Store"
 description: " "
 date: 2023-10-04
-tags: [introduction), architecture)]
+tags: [architecture]
 comments: true
 share: true
 ---

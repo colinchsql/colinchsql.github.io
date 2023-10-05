@@ -3,7 +3,7 @@ layout: post
 title: "Utilizing the SQL Query Store for efficient query tuning in Apache Geode"
 description: " "
 date: 2023-10-04
-tags: [introduction), what]
+tags: [what]
 comments: true
 share: true
 ---

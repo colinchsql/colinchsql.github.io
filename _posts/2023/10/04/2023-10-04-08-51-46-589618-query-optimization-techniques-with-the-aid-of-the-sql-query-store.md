@@ -3,7 +3,7 @@ layout: post
 title: "Query optimization techniques with the aid of the SQL Query Store"
 description: " "
 date: 2023-10-04
-tags: [introduction), enabling]
+tags: [enabling]
 comments: true
 share: true
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "Query performance optimization techniques for Apache Kafka Streams using the Query Store"
 description: " "
 date: 2023-10-04
-tags: [introduction), query]
+tags: [query]
 comments: true
 share: true
 ---
