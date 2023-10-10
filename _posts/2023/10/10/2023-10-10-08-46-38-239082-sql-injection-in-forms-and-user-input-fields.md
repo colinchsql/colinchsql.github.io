@@ -16,6 +16,7 @@ SQL injection occurs when an attacker is able to inject malicious SQL code into 
 
 For example, consider a login form that accepts a username and password. If the application does not properly sanitize the user-supplied inputs before constructing the SQL query, an attacker can craft a malicious input that alters the query's behavior. For instance, if the input is not sanitized properly, an attacker could input `' OR '1'='1' --` as the password field value. This would result in a SQL query like:
 
+{% include codeHeader.html %}
 ```sql
 SELECT * FROM users WHERE username = 'admin' AND password = '' OR '1'='1' --'
 ```

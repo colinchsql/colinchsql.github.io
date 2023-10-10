@@ -14,12 +14,14 @@ SQL injection attacks are one of the most common and dangerous web application v
 
 Classic SQL injection occurs when an attacker injects malicious SQL code into a query through user input fields. For example, consider the following vulnerable code snippet:
 
+{% include codeHeader.html %}
 ```sql
 username = getRequestParameter("username");
 password = getRequestParameter("password");
 query = "SELECT * FROM users WHERE username = '" + username + "' AND password = '" + password + "'";
 ```
 In this case, an attacker can manipulate the "username" parameter to inject additional SQL code. For instance, they can enter `' OR '1'='1'` as the username, causing the query to become:
+{% include codeHeader.html %}
 ```sql
 SELECT * FROM users WHERE username = '' OR '1'='1' AND password = 'password';
 ```
@@ -29,6 +31,7 @@ This would return all rows in the "users" table, effectively bypassing the authe
 
 Blind SQL injection occurs when an attacker can't directly see the output of the injected SQL code. Instead, they infer information from the application's response. For example, consider the following code snippet:
 
+{% include codeHeader.html %}
 ```sql
 query = "SELECT * FROM users WHERE id = " + id + "'";
 ```
@@ -38,6 +41,7 @@ If the query returns a specific response when the condition is true (e.g., "User
 
 Union-based SQL injection uses the UNION operator to combine the result set of a manipulated query with the result set of an unrelated query. It allows an attacker to extract data from other tables or even execute arbitrary SQL statements. For example, consider the following vulnerable code snippet:
 
+{% include codeHeader.html %}
 ```sql
 id = getRequestParameter("id");
 query = "SELECT * FROM users WHERE id = " + id;
@@ -48,6 +52,7 @@ An attacker can inject a UNION-based payload to combine the original query with 
 
 Time-based blind SQL injection exploits the server's delay in processing the injected SQL code. An attacker can inject code that forces the server to sleep for a specified amount of time, indicating if the injected condition is true or false. For example:
 
+{% include codeHeader.html %}
 ```sql
 query = "SELECT * FROM users WHERE id = " + id + "' AND (SLEEP(5) > 0)";
 ```

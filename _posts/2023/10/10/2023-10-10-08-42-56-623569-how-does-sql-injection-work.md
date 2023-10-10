@@ -36,6 +36,7 @@ There are several common types of SQL injection attacks:
 
 Let's consider a simple example where a web application uses a vulnerable SQL query to authenticate a user:
 
+{% include codeHeader.html %}
 ```sql
 SELECT * FROM users WHERE username = 'input_username' AND password = 'input_password';
 ```
@@ -48,6 +49,7 @@ If the input parameters are not properly validated or sanitized, an attacker cou
 
 The resulting SQL query would become:
 
+{% include codeHeader.html %}
 ```sql
 SELECT * FROM users WHERE username = '' OR '1'='1' AND password = 'input_password';
 ```

@@ -18,6 +18,7 @@ SQL injection occurs when an application fails to properly validate or sanitize 
 
 For example, consider a web-based reporting tool that allows users to search for customer information by specifying a customer ID. If the application doesn't properly sanitize or validate the user input, an attacker could submit a specially crafted input like `1 OR 1=1` as the customer ID, resulting in the following SQL query:
 
+{% include codeHeader.html %}
 ```sql
 SELECT * FROM customers WHERE customer_id = 1 OR 1=1;
 ```

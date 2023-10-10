@@ -24,6 +24,7 @@ SQL Injection occurs when an attacker is able to manipulate the input of a datab
 
 Consider the following example:
 
+{% include codeHeader.html %}
 ```sql
 SELECT * FROM users WHERE username = '$username' AND password = '$password'
 ```

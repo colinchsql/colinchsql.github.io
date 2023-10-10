@@ -35,6 +35,7 @@ By using prepared statements, the application treats the user input as data and 
 ## Preventing SQL Injection in Oracle
 In an Oracle database, you can use bind variables to prevent SQL injection. Bind variables are placeholders for data in a SQL statement. They are defined within the SQL statement but are represented by a placeholder, such as a question mark (`?`) or a named variable. Here's an example:
 
+{% include codeHeader.html %}
 ```sql
 DECLARE
   username VARCHAR2(100) := 'john';

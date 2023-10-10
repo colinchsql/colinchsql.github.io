@@ -47,6 +47,7 @@ An attacker can bypass the authentication mechanism by entering a malicious inpu
 
 This input will modify the query to:
 
+{% include codeHeader.html %}
 ```sql
 SELECT * FROM users WHERE username = '' OR '1'='1' --' AND password = '$password'
 ```
@@ -76,6 +77,7 @@ An attacker can exploit this vulnerability by entering a malicious input like:
 
 This input will modify the query to:
 
+{% include codeHeader.html %}
 ```sql
 SELECT * FROM users WHERE username = ''; DROP TABLE users; --' AND password = '$password'
 ```
@@ -105,6 +107,7 @@ An attacker can exploit this vulnerability by entering a malicious input like:
 
 This input will modify the query to:
 
+{% include codeHeader.html %}
 ```sql
 SELECT * FROM users WHERE username = '' UNION SELECT table_name FROM information_schema.tables; --' AND password = '$password'
 ```

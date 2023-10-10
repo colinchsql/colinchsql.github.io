@@ -35,6 +35,7 @@ Input validation is a critical step to ensure that only expected values are acce
 
 PostgreSQL provides several built-in functions for sanitizing user input, such as `quote_literal()` and `quote_ident()`, which can be used to escape special characters.
 
+{% include codeHeader.html %}
 ```sql
 SELECT * FROM users WHERE username = quote_ident(:username);
 ```
@@ -43,6 +44,7 @@ SELECT * FROM users WHERE username = quote_ident(:username);
 
 Using stored procedures is another effective technique to prevent SQL injection. Stored procedures encapsulate SQL code within the database itself and are called with parameters. By utilizing stored procedures, you can reduce the risk of injection attacks as the database engine handles the parameterization and query execution.
 
+{% include codeHeader.html %}
 ```sql
 CREATE OR REPLACE FUNCTION get_user(username TEXT)
 RETURNS SETOF users AS $$

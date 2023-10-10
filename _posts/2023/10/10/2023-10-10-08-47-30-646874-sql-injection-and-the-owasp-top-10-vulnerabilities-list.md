@@ -28,12 +28,14 @@ The most common form of SQL Injection is known as **'Classic SQL Injection'**. I
 
 For example, consider the following SQL query used for user authentication:
 
+{% include codeHeader.html %}
 ```sql
 SELECT * FROM Users WHERE username = 'user' AND password = 'pass'
 ```
 
 In a vulnerable application, an attacker could enter `' OR 1=1 --` as the username and leave the password field blank. The resulting SQL query becomes:
 
+{% include codeHeader.html %}
 ```sql
 SELECT * FROM Users WHERE username = '' OR 1=1 -- ' AND password = 'pass'
 ```
