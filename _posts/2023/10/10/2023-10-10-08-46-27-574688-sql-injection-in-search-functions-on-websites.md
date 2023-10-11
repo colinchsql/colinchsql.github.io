@@ -24,14 +24,14 @@ Search functions on websites often use user input to dynamically construct SQL q
 
 Let's consider an example where a website's search function uses user input to construct a SQL query:
 
-{% include codeHeader.html %}
+
 ```sql
 SELECT * FROM products WHERE name LIKE '%{user_input}%';
 ```
 
 An attacker can exploit this by inputting malicious code as the search query, such as:
 
-{% include codeHeader.html %}
+
 ```sql
 ' UNION SELECT username, password FROM users --
 ```

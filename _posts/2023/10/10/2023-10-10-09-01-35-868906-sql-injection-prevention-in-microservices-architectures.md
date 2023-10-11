@@ -35,7 +35,7 @@ Microservices architectures involve many independent services communicating with
 
 Using parameterized queries or prepared statements is an effective technique to prevent SQL injection attacks. Rather than concatenating user input directly into SQL queries, parameterized queries separate the query logic from the user-supplied values. This helps to ensure that input is properly sanitized and eliminates the risk of SQL injection.
 
-{% include codeHeader.html %}
+
 ```sql
 -- Example in Node.js with MySQL
 const sql = 'SELECT * FROM users WHERE username = ? AND password = ?';

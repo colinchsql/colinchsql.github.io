@@ -22,7 +22,7 @@ However, if user input is blindly used in these functions without proper validat
 
 Consider the following example where a dynamic SQL query is built using concatenation operations:
 
-{% include codeHeader.html %}
+
 ```sql
 DECLARE @username NVARCHAR(50);
 SET @username = 'admin';
@@ -41,7 +41,7 @@ To prevent SQL injection in string manipulation functions and concatenation oper
 
 1. **Parameterized Queries**: Instead of concatenating user input directly into the query, use parameterized queries prepared statements. Parameterization separates the input data from the SQL statement, preventing attackers from manipulating the query structure. Here's an example using parameterization:
 
-{% include codeHeader.html %}
+
 ```sql
 DECLARE @username NVARCHAR(50);
 SET @username = 'admin';

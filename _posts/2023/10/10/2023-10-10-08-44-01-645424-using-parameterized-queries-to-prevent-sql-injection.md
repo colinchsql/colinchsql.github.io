@@ -26,7 +26,7 @@ cursor.execute(sql)
 
 In this example, if the user enters `' OR 1=1 --` as the username and password, the resulting SQL query becomes:
 
-{% include codeHeader.html %}
+
 ```sql
 SELECT * FROM users WHERE username = '' OR 1=1 --' AND password = ''
 ```

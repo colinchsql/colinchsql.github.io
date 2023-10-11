@@ -20,14 +20,14 @@ SQL Injection takes advantage of poor input validation and improper sanitization
 
 Here is an example of a vulnerable login form:
 
-{% include codeHeader.html %}
+
 ```sql
 SELECT * FROM users WHERE username = '$username' AND password = '$password'
 ```
 
 An attacker can input `' OR '1'='1` as the username and bypass the authentication check:
 
-{% include codeHeader.html %}
+
 ```sql
 SELECT * FROM users WHERE username = '' OR '1'='1' AND password = '$password'
 ```

@@ -17,13 +17,13 @@ Before diving into the role of database hardening, let's briefly understand how 
 When a web application dynamically constructs SQL queries using user input without proper validation or sanitization, an attacker can exploit this vulnerability. By injecting malicious SQL code into the application's input fields, such as username or password, they can modify the intended behavior of the query.
 
 For example, consider a login form where the SQL query is constructed as follows:
-{% include codeHeader.html %}
+
 ```sql
 SELECT * FROM users WHERE username = '<user_input>' AND password = '<user_input>';
 ```
 
 If the application fails to properly validate and sanitize the user input, an attacker can input `' OR '1'='1` as the username, resulting in the following query:
-{% include codeHeader.html %}
+
 ```sql
 SELECT * FROM users WHERE username = '' OR '1'='1' AND password = '<user_input>';
 ```

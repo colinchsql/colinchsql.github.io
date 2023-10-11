@@ -19,7 +19,7 @@ Blind SQL injection occurs when an application's response does not directly reve
 1. **Boolean-Based Blind SQL Injection**: In this technique, the attacker injects SQL code that affects the application's logic through Boolean conditions like `if` statements. By analyzing the application's response, the attacker gradually narrows down the correct values by posing true/false questions to the database.
 
    Example:
-   {% include codeHeader.html %}
+   
 ```sql
    SELECT * FROM users WHERE id = 1 AND (SELECT 'true' FROM dual WHERE (SELECT COUNT(*) FROM users) > 0);
    ```
@@ -27,7 +27,7 @@ Blind SQL injection occurs when an application's response does not directly reve
 2. **Time-Based Blind SQL Injection**: In situations where the application's response is completely unaware of the injected SQL code, the attacker can exploit delays in the application's response to infer the results. This technique involves injecting time-delayed SQL statements, forcing the server to pause for a specified duration.
 
    Example:
-   {% include codeHeader.html %}
+   
 ```sql
    SELECT * FROM users WHERE id = 1 AND (SELECT CASE WHEN (SELECT SUBSTRING('abcdef', 1, 1)) = 'a' THEN pg_sleep(10) ELSE pg_sleep(0) END);
    ```
@@ -35,7 +35,7 @@ Blind SQL injection occurs when an application's response does not directly reve
 3. **Error-Based Blind SQL Injection**: When an application does not display SQL errors but provides useful error messages to its users, this technique can be used. By injecting SQL code that triggers specific errors, the attacker can analyze the error messages to gain information about the database structure or retrieve data.
 
    Example:
-   {% include codeHeader.html %}
+   
 ```sql
    SELECT * FROM users WHERE id = 1 AND (SELECT CASE WHEN (SELECT SUBSTRING('abcdef', 1, 1) FROM dual) = 'a' THEN 'true' ELSE 'false' END);
    ```

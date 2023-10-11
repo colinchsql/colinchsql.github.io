@@ -24,7 +24,7 @@ $query = "SELECT * FROM users WHERE username='" . $_POST['username'] . "' AND pa
 
 If the user enters `' OR '1'='1` as the username and an empty string as the password, the resulting SQL query becomes:
 
-{% include codeHeader.html %}
+
 ```sql
 SELECT * FROM users WHERE username='' OR '1'='1' AND password=''
 ```

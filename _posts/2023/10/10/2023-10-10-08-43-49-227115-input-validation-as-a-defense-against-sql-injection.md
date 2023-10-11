@@ -18,7 +18,7 @@ Here are some best practices for implementing input validation to defend against
 
 Rather than concatenating user input directly into your SQL queries, use parameterized queries. Parameterized queries allow you to separate the SQL code from the user input, preventing any injected SQL code from being executed. This method binds the user input to query parameters, ensuring that it is treated as data and not executable code.
 
-{% include codeHeader.html %}
+
 ```sql
 SELECT * FROM users WHERE username = :username AND password = :password;
 ```

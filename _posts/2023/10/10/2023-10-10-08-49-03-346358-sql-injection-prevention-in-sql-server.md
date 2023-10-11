@@ -16,7 +16,7 @@ To prevent SQL Injection attacks in SQL Server, follow these best practices:
 
 One of the most effective ways to prevent SQL Injection is by using parameterized queries. Parameterized queries separate the SQL code from the user input, ensuring that user input is treated as data rather than executable code. This prevents attackers from injecting malicious SQL statements.
 
-{% include codeHeader.html %}
+
 ```sql
 -- Example of a parameterized query using SQL Server's built-in SqlParameter class in .NET
 string sql = "SELECT * FROM Users WHERE Username = @username AND Password = @password";
@@ -29,7 +29,7 @@ cmd.Parameters.AddWithValue("@password", password);
 
 Using stored procedures is another effective method of preventing SQL Injection attacks. Stored procedures are precompiled SQL statements stored in the database server. By calling stored procedures instead of constructing SQL statements dynamically, you reduce the risk of injection attacks.
 
-{% include codeHeader.html %}
+
 ```sql
 -- Example of a stored procedure in SQL Server
 CREATE PROCEDURE dbo.AuthenticateUser
