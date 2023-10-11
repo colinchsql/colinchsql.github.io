@@ -23,3 +23,9 @@ copyCodeButtons.forEach((copyCodeButton, index) => {
     }, 2000);
   });
 });
+
+document.addEventListener("DOMContentLoaded", function(event) {
+  document.querySelectorAll('.copy-code-button').forEach((copyCodeButton) => {
+      copyCodeButton.addEventListener('click', copyCode);
+  });
+});
