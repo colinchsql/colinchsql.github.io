@@ -3,7 +3,7 @@ layout: post
 title: "Query optimization techniques in SQL tuning"
 description: " "
 date: 2023-09-26
-tags: [Query, #Conclusion]
+tags: [Query, Conclusion]
 comments: true
 share: true
 ---
